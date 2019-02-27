@@ -6,19 +6,22 @@ $(function() {
       // additional error messages or events
     },
     submitSuccess: function($form, event) {
-      event.preventDefault(); // prevent default submit behaviour
+      //event.preventDefault(); // prevent default submit behaviour
       // get values from FORM
-      var name = $("input#name").val();
-      var email = $("input#email").val();
-      var message = $("textarea#message").val();
-      var firstName = name; // For Success/Failure Message
+      //var name = $("input#name").val();
+      //var email = $("input#email").val();
+      //var message = $("textarea#message").val();
+      //var firstName = name; // For Success/Failure Message
       // Check for white space in name for Success/Fail message
-      if (firstName.indexOf(' ') >= 0) {
+      /*if (firstName.indexOf(' ') >= 0) {
         firstName = name.split(' ').slice(0, -1).join(' ');
-      }
-      $this = $("#sendMessageButton");
-      $this.prop("disabled", true); // Disable submit button until AJAX call is complete to prevent duplicate messages
-      $.ajax({
+      }*/
+      //$this = $("#sendMessageButton");
+      //$this.prop("disabled", true); // Disable submit button until AJAX call is complete to prevent duplicate messages
+      
+      
+
+      /*$.ajax({
         url: "https://formspree.io/info@ellipticbits.com",
         type: "POST",
         data: {
@@ -56,6 +59,8 @@ $(function() {
           }, 1000);
         }
       });
+    */
+
     },
     filter: function() {
       return $(this).is(":visible");
